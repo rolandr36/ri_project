@@ -657,7 +657,8 @@ void Parser::AB_WORD() {
 
 int main()
 {
-    double a, total = 0;
+    double a, b, total = 0;
+    b=time2;
     ofstream results_file;
     results_file.open ("results.txt");
 
@@ -790,11 +791,14 @@ int main()
     }
     cout << "--------------------------------------------------------------------------" << endl;
     cout << endl;
-    cout<<"Done in "<< total <<" s."<<endl;
     cout << " ==================================================" << endl;
     cout << " == General MAP: " << mapr_total/100 << "    General P@10: " << p10_total/100 << " ==" << endl;
     cout << " ==================================================" << endl;
-
+    cout << endl;
+    cout<<" 100 querys processed in "<< total <<" seconds."<<endl;
+    cout << endl;
+    cout<<" Done in "<< time2-b <<" seconds."<<endl;
+    cout << endl;
     results_file << " ==================================================" << endl;
     results_file << " == General MAP: " << mapr_total/100 << "    General P@10: " << p10_total/100 << " ==" << endl;
     results_file << " ==================================================" << endl;
